@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <title>天然氣歷史價格追蹤</title>
+  <link rel="stylesheet" href="stylesheets/style.css" />
+</head>
+<body>
+<div class="container">
+  <h1>臺灣天然氣價格追蹤系統</h1>
+
+  <section class="section">
+    <h2>📝新增天然氣價格資料</h2>
+    <form id="insertForm">
+      日期: <input type="date" id="date" required><br>
+      商品名稱:
+      <select id="product" required>
+        <option value="">-- 請選擇 --</option>
+        <option value="工業及其他用戶">工業及其他用戶 (液化天然氣) 元/公斤</option>
+        <option value="公用天然氣用戶">公用天然氣用戶 (液化天然氣) 元/公斤</option>
+      </select><br>
+      價格: <input type="number" id="price" step="0.01" required><br>
+      <button type="submit">新增資料</button>
+    </form>
+  </section>
+
+  <section class="section">
+    <h2>🔍查詢天然氣價格資料</h2>
+    <form id="searchForm">
+      商品類別：
+      <select id="productSelect">
+        <option value="">-- 請選擇 --</option>
+        <option value="工業及其他用戶">工業及其他用戶 (液化天然氣) 元/公斤</option>
+        <option value="公用天然氣用戶">公用天然氣用戶 (液化天然氣) 元/公斤</option>
+      </select><br><br>
+      查詢日期：
+      <input type="date" id="dateSelect"><br><br>
+      <button type="submit">查詢</button>
+    </form>
+  </section>
+
+  <section class="section">
+    <h2>📋天然氣歷史價格表格</h2>
+    <table border="1">
+      <thead>
+      <tr><th>日期</th><th>商品名稱</th><th>價格</th></tr>
+      </thead>
+      <tbody id="resultBody"></tbody>
+    </table>
+  </section>
+
+  <section class="section">
+    <h2>📊 天然氣歷史價格統計圖</h2>
+    <select id="chartSelect">
+      <option value="">-- 請選擇商品 --</option>
+      <option value="工業及其他用戶">工業及其他用戶 (液化天然氣) 元/公斤</option>
+      <option value="公用天然氣用戶">公用天然氣用戶 (液化天然氣) 元/公斤</option>
+      <option value="both">工業與公用天然氣用戶(液化天然氣) 元/公斤</option>
+    </select>
+
+
+
+    <button id="showChart">顯示價格統計圖</button>
+    <canvas id="priceChart"></canvas>
+  </section>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="javascripts/script.js"></script>
+</body>
+</html>

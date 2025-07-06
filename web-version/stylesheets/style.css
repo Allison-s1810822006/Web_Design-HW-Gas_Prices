@@ -1,0 +1,87 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f2f2f2;
+  background-image: url('../images/gas.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: 30px;
+  background-color: rgba(255,255,255,0.92); /* 半透明白底，提升可讀性 */
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+  color: #006699;
+  margin-bottom: 40px;
+}
+
+.section {
+  background: #f7f7f7;
+  border-radius: 12px;
+  padding: 24px 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+form input, form select, form button {
+  margin: 5px 0;
+  padding: 8px;
+  width: 100%;
+  max-width: 400px;
+  font-size: 16px;
+}
+
+form button {
+  background-color: #007ACC;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #005a99;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th, td {
+  text-align: center;
+  padding: 10px;
+}
+
+canvas {
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+#showChart {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#showChart:hover {
+  background-color: #45a049;
+}
